@@ -1,0 +1,25 @@
+<h1>Добавить станцию</h1>
+
+<%= form_for(@railway_station) do |f| %>
+    <% if @railway_station.errors.any? %>
+        <div id="error_explanation">
+          <h2><% pluralize(@railway_station.errors.count, "error") %> Ошибка! </h2>
+          <ul>
+            <% @railway_station.errors.full_messages.each do |message| %>
+                <li><%= message %> </li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Создать'%>
+    </div>
+
+<% end %>
+
+<%= link_to 'Назад', railway_stations_path %>
