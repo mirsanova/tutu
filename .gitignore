@@ -7,11 +7,43 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+
+.idea
+
+/doc/examples
+config/database.yml
+config/private_pub.yml
+
+# Ignore uploaded files
+/public/system
+/public/tmp
+/public/uploads
+/public/spec
+
+# Mac OS files
+.DS_Store
+
+# coverage files
+/coverage
+
+.powrc
+
+*.sublime-project
+*.sublime-workspace
+certs/
+
+.yardoc
+/log
+.powenv
+
+# Ignore application configuration
+/config/application.yml
+.zeus.sock
+
+dump.rdb
+config/*.sphinx.conf
+db/sphinx
