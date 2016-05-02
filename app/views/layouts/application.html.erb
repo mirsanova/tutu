@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="wrapper">
+      <div class="content">
+        <%= yield %>
+      </div>
+      <div class="footer">(с) 2015 Ксения Солопина. Учебный проект.</div>
+    </div>
 </body>
 </html>
