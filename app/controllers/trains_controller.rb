@@ -5,6 +5,7 @@ class TrainsController < ApplicationController
   end
 
   def show
+    @compartment_bottom_seats_count, @compartment_top_seats_count, @econom_top_seats_count, @econom_bottom_seats_count = @train.seats_count
   end
 
   def new
@@ -44,6 +45,6 @@ class TrainsController < ApplicationController
   end
 
   def train_params
-    params.require(:train).permit(:number)
+    params.require(:train).permit(:number, :current_station_id, :route_id)
   end
 end
