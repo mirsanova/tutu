@@ -1,9 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>YНомер билета:</strong>
+  <strong>Номер билета:</strong>
   <%= @ticket.number %>
 </p>
+
+<p>
+  <strong>Начальная станция:</strong>
+  <% if @ticket.arrival_station.present? %>
+      <%= @ticket.arrival_station.title %>
+  <% else %>
+      Не указано
+  <% end %>
+</p>
+
+<p>
+  <strong>Конечная станция:</strong>
+  <% if @ticket.departure_station.present? %>
+      <%= @ticket.departure_station.title %>
+  <% else %>
+      Не указано
+  <% end %>
+</p>
+
 
 <%= link_to 'Редактировать', edit_ticket_path(@ticket) %>
 <%= link_to 'Назад', tickets_path %>
